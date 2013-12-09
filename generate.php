@@ -1,17 +1,12 @@
 <?php
 // Set the content-type
+include("configs.php");
 include("icons.data.php");
 
-$font = 'fontawesome-webfont.ttf';
-$outputColors = array
-(
-	// do not use 255,0,255 as it is reserved color for background triming
-	'white'=>array('r'=>255, 'g'=>255, 'b'=>255),
-	'grey'=>array('r'=>128, 'g'=>128, 'b'=>128),
-	'black'=>array('r'=>0, 'g'=>0, 'b'=>0),
-);
-$outputSizes = array('128', '96', '64', '48', '32', '24', '16');
-//$outputSizes = array('64');
+$outputDir = $CONFIGS['outputDir'];
+$font = $CONFIGS['font'];
+$outputColors = $CONFIGS['outputColors'];
+$outputSizes = $CONFIGS['outputSizes'];
 
 foreach($outputColors as $outputColorCode=>$outputColorParam)
 {
@@ -30,7 +25,7 @@ foreach($outputColors as $outputColorCode=>$outputColorParam)
 		{
 			outputText("Generating icon '$iKey'... ");
 			$text = $iParam['code'];
-			$fileName = sprintf("output/%s/%s/%s.png", $outputColorCode, $outputSize, $iKey); 
+			$fileName = sprintf("%s/%s/%s/%s.png", $outputDir, $outputColorCode, $outputSize, $iKey); 
 			$dirPath = dirname($fileName);
 			
 			if(!is_dir($dirPath) || !file_exists($dirPath))
