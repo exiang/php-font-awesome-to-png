@@ -3,7 +3,7 @@ PHP Font Awesome to PNG
 
 This program allows you to extract the awesome
 [Font Awesome] (http://fortawesome.github.com/Font-Awesome/) icons as PNG images
-of specified size.
+of specified size. It also output to base64 data uri format in a html file.
 
 ### Usage
 To use the program, you need the Font Awesome TTF file & _variables.scss file, which is available in
@@ -12,7 +12,7 @@ To use the program, you need the Font Awesome TTF file & _variables.scss file, w
 
 
   - download fontawesome and unzip
-  - copy scss\_variables.scss over as _variables.scss
+  - copy scss\\_variables.scss over as _variables.scss
   - copy fonts\fontawesome-webfont.ttf over as fontawesome-webfont.ttf 
   - copy configs.php.dist and rename to configs.php
   - edit configs.php to match your environment
