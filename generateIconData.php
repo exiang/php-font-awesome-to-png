@@ -15,7 +15,7 @@ foreach($lines as $l)
 		$lArray = explode(":", $l);
 		$key = str_replace('$fa-var-', '', trim($lArray[0]));
 		$value = str_replace(array('"'), '', trim($lArray[1]));
-		$value2Write = str_replace('\f', '&#xf', $value);
+		$value2Write = str_replace('\\', '&#x', $value);
 		echo $key . " - " . $value;
 		echo "<br>";
 		

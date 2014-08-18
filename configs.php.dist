@@ -14,3 +14,5 @@ $CONFIGS['outputColors'] = array
 	'black'=>array('r'=>0, 'g'=>0, 'b'=>0),
 );
 $CONFIGS['outputSizes'] = array('32', '24', '16');
+// output to base64 uri format in html file ("base64.htm"), stored together with the generated icons
+$CONFIGS['outputBase64'] = true;
