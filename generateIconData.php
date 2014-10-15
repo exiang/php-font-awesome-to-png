@@ -10,7 +10,7 @@ $lines = explode("\n", $readBuffer);
 $writeBuffer = "<?php\n\$icons = array\n(\n";
 foreach($lines as $l)
 {
-	if(strstr($l, "$fa-var-"))
+	if(strstr($l, '$fa-var-'))
 	{
 		$lArray = explode(":", $l);
 		$key = str_replace('$fa-var-', '', trim($lArray[0]));
